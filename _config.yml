@@ -23,7 +23,7 @@ email: narvik.bunkers@gamil.com
 description: >- # this means to ignore newlines until "baseurl:"
   Fortifications and related structures in and around Narvik
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://narvik-bunkers.no/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://narvik-bunkers.no" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  narvik-bunkers
 
 # Build settings
