@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Map | Narvik Bunkers</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Chris Petrich">
+        <meta name="description" content="Author: Chris Petrich, Content: Map of WW2 bunkers and structures around Narvik">
+
+        <!-- tell mobile browser to turn off scaling -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+        <!-- locate control plug-in -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+        <style>
+            html, body {
+                padding: 0;
+                margin: 0;
+            }
+            html, body, #map {
+                height: 100%;
+                width: 100vw;
+            }
+            .leaflet-popup-content { min-width: 15em; max-width:15em;} */ /* this typically scales with text width, so fix it here. */
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+        <script>
+            var center_loc = -1;
+            var zoom_value = 18;
+            var pos_code = -1;
+            var params = new URLSearchParams(window.location.search);
+            if (params.has('ll')) {
+                var lls = params.get('ll');
+                if (lls.length < 100) {
+                    var segments = lls.split(",");
+                    if (segments.length == 2) {
+                        var lat = +(segments[0]);
+                        var lon = +(segments[1]);
+                        if ((lat==lat) && (lon==lon) && (lat >= -90) && (lat <=90) && (lon>=-180) && (lon<=180)) {
+                            center_loc = [lat, lon];
+                        }
+                    }
+                }
+            }
+
+            if (params.has('z')) {
+                var lls = params.get('z');
+                if (lls.length < 100) {
+                    var zoom = +(lls);
+                    if ((zoom >=1) && (zoom <= 20)) {
+                        zoom_value = zoom;
+                    }
+                }
+            }
+            
+            if (params.has('pos')) {
+                var pos = params.get('pos');
+                if (pos.length == 3) {
+                    pos_code = pos;
+                }
+            }
+
+            var url2 = 'narvik-bunkers.json';
+            var map = L.map('map',{zoomSnap:0}).fitBounds([[68.428, 17.37],[68.45, 17.445]]); // or use setView() to set the zoom level explicitly
+            if (center_loc != -1) {
+                map.setView(center_loc, zoom_value);
+            }
+            L.tileLayer('https://{s}.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo4&zoom={z}&x={x}&y={y}', {
+                attribution: '<a href="https://www.kartverket.no/">Kartverket</a> | <a href="about/">Narvik Bunkers</a>',
+                subdomains: ['opencache3','opencache2','opencache']
+            }).addTo(map);
+            var locate = L.control.locate({setView:true, maxZoom:16, locateOptions:{enableHighAccuracy:true}}).addTo(map);
+            map.on('locationfound', function(e){locate.options.strings.popup = e.latlng.lat.toFixed(6) + ', ' + e.latlng.lng.toFixed(6);});
+            
+            var scalebar = L.control.scale({metric:true, imperial:false}).addTo(map);
+            
+            
+var infoControl =  L.Control.extend({
+
+  onAdd: function (map) {
+    var c = L.DomUtil.create('i');
+    c.style.fontFamily = 'FontAwesome';
+    c.style.fontStyle = 'normal';
+    c.textContent = "\uf05a"; // fa-info-circle
+
+    /* real border has an alpha channel */
+    c.style.border = '2px solid #ccc';
+    c.style.borderRadius = '3px';
+    
+    c.style.fontSize = 'large';
+    c.style.backgroundColor = 'white';
+    c.style.backgroundSize = "30px 30px";
+    c.style.width = '30px';
+    c.style.height = '30px';
+    c.style.textAlign = 'center';
+    c.style.lineHeight = '30px';
+    c.zIndex = 800;
+    
+    c.onmouseover = function(){
+      c.style.backgroundColor = '#f4f4f4'; 
+    }
+    c.onmouseout = function(){
+      c.style.backgroundColor = 'white'; 
+    }
+
+    c.onclick = function(){
+        window.open('about/');
+    }
+
+    return c;
+  }
+});
+
+var infoCtrl = new infoControl({position: 'topleft'}).addTo(map);
+            
+            var BasicMarker = L.Icon.extend({
+                options: {
+                    iconSize:     [11, 11],
+                    iconAnchor:   [5, 5],
+                    popupAnchor:  [0, -5]
+                }
+            });
+            
+            var icons = {'circle-red': new BasicMarker({iconUrl: 'icons/circle-ring-red-11.png'}),
+                         'rect-red': new BasicMarker({iconUrl: 'icons/rect-ring-red-11.png'}),
+                         'u-red': new BasicMarker({iconUrl: 'icons/u-ring-red-11.png'}),
+                         'circle-green': new BasicMarker({iconUrl: 'icons/circle-ring-green-11.png'}),
+                         'circle-orange': new BasicMarker({iconUrl: 'icons/circle-ring-orange-11.png'}),
+                         'circle-black': new BasicMarker({iconUrl: 'icons/circle-black-11.png'}),
+                         'circle-dot-orange': new BasicMarker({iconUrl: 'icons/circle-dot-ring-orange-11.png'}),
+                         'circle-cross-orange': new BasicMarker({iconUrl: 'icons/circle-cross-ring-orange-11.png'})
+                        };
+                        
+            function geojsonEachFeture(feature, layer) {
+                if (feature.properties && feature.properties.description) {
+                    layer.bindPopup(feature.properties.description);
+                }
+            }
+            
+            var location_data;
+            var http = new XMLHttpRequest();
+            http.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200 && this.responseText.substr(0,1) == "{") {
+                    location_data = JSON.parse(this.responseText);
+                    
+                    L.geoJSON(location_data.data, {
+                        pointToLayer: function (f, latlng) {
+                            return L.marker(latlng, {icon: icons[f.properties.iconImage]});
+                            },
+                        onEachFeature: geojsonEachFeture
+                        }
+                    ).addTo(map);
+                    
+                    if (pos_code != -1) {
+                        location_data.data.features.forEach(function(item,index) {
+                            if (item.properties.name.localeCompare(pos_code) == 0) {
+                                map.setView([item.geometry.coordinates[1],item.geometry.coordinates[0]], zoom_value);
+                                /* what's missing is to draw a circle around this marker */
+                            }
+                        });
+                        
+                    }
+                }
+            }
+            http.open("GET", url2, true);
+            http.send();
+            
+            map.on('contextmenu', function(e) {
+                var marker = new L.marker(e.latlng,{
+                    draggable: true,
+                    autoPan: true
+                }).bindTooltip(e.latlng.lat.toFixed(5)+', '+e.latlng.lng.toFixed(5), {permanent: true, direction: 'right'}).addTo(map);
+                marker.on('contextmenu',function(e){map.removeLayer(this);});
+                marker.on('drag',function(e){this.setTooltipContent(e.latlng.lat.toFixed(5)+', '+e.latlng.lng.toFixed(5));});
+            });
+        </script>
+    </body>
+</html>
