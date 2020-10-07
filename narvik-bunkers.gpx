@@ -65,19 +65,23 @@
   </wpt>
   <wpt lat="68.4438" lon="17.41539">
     <name>CQK: Bunker</name>
-    <desc>Regelbau-style bunker</desc>
+    <desc>Regelbau-style bunker entrance</desc>
   </wpt>
   <wpt lat="68.45539" lon="16.71345">
     <name>CRH: Battle Station</name>
     <desc>battle platform</desc>
   </wpt>
-  <wpt lat="68.430881" lon="17.427241">
+  <wpt lat="68.43094" lon="17.42746">
     <name>CYN: Bunker</name>
-    <desc>Regelbau-style bunker</desc>
+    <desc>Regelbau-style bunker entrance</desc>
   </wpt>
   <wpt lat="68.43341" lon="17.39152">
     <name>CYY: Bunker</name>
     <desc>ammunition bunker/shelter; walled battle station</desc>
+  </wpt>
+  <wpt lat="68.4315" lon="17.42453">
+    <name>CZW: Tunnel</name>
+    <desc>tunnel entrance walled shut; wide tunnel entrace</desc>
   </wpt>
   <wpt lat="68.3749" lon="17.2536">
     <name>DJR: Tunnel</name>
@@ -167,6 +171,10 @@
     <name>HRD: Trench</name>
     <desc>trench</desc>
   </wpt>
+  <wpt lat="68.43696" lon="17.43054">
+    <name>HRQ: Tunnel</name>
+    <desc>tunnel with door; narrow tunnel entrance; unknown origin</desc>
+  </wpt>
   <wpt lat="68.37115" lon="17.25027">
     <name>HYL: Bunker</name>
     <desc>bunker with straight entrance; block construction</desc>
@@ -239,6 +247,10 @@
     <name>KVY: Tunnel</name>
     <desc>tunnel with door; narrow tunnel entrance</desc>
   </wpt>
+  <wpt lat="68.43129" lon="17.42463">
+    <name>KWW: Tunnel</name>
+    <desc>tunnel entrance walled shut; wide tunnel entrace</desc>
+  </wpt>
   <wpt lat="68.43306" lon="17.38971">
     <name>KXJ: Bunker</name>
     <desc>ammunition bunker/shelter; walled battle station</desc>
@@ -257,7 +269,7 @@
   </wpt>
   <wpt lat="68.44315" lon="17.40121">
     <name>LHM: Bunker</name>
-    <desc>Regelbau-style bunker</desc>
+    <desc>Regelbau-style bunker entrance</desc>
   </wpt>
   <wpt lat="68.44215" lon="17.42091">
     <name>LHX: Tunnel</name>
@@ -277,7 +289,11 @@
   </wpt>
   <wpt lat="68.44352" lon="17.40334">
     <name>LRB: Bunker</name>
-    <desc>Regelbau-style bunker</desc>
+    <desc>Regelbau-style bunker entrance</desc>
+  </wpt>
+  <wpt lat="68.43099" lon="17.42395">
+    <name>LRY: Battle Station</name>
+    <desc>low-walled battle station</desc>
   </wpt>
   <wpt lat="68.44126" lon="17.41307">
     <name>LZG: Tunnel</name>
@@ -351,7 +367,7 @@
     <name>NPB: Building</name>
     <desc>building walls; building lowered into ground</desc>
   </wpt>
-  <wpt lat="68.4247" lon="17.43107">
+  <wpt lat="68.42477" lon="17.43096">
     <name>NPN: Pit</name>
     <desc>pit</desc>
   </wpt>
@@ -379,13 +395,17 @@
     <name>PJH: Tunnel</name>
     <desc>tunnel with door; wide tunnel entrace</desc>
   </wpt>
+  <wpt lat="68.43591" lon="17.41089">
+    <name>PJS: Tunnel</name>
+    <desc>tunnel entrance walled shut; narrow tunnel entrance</desc>
+  </wpt>
   <wpt lat="68.4191" lon="17.29715">
     <name>PQN: Bunker</name>
-    <desc>Regelbau-style bunker</desc>
+    <desc>Regelbau-style bunker entrance</desc>
   </wpt>
   <wpt lat="68.4304" lon="17.42663">
     <name>PQY: Bunker</name>
-    <desc>Regelbau-style bunker</desc>
+    <desc>Regelbau-style bunker entrance</desc>
   </wpt>
   <wpt lat="68.43417" lon="17.39395">
     <name>PRL: Building</name>
@@ -503,6 +523,10 @@
     <name>SJQ: Battle Station</name>
     <desc>low-walled battle station</desc>
   </wpt>
+  <wpt lat="68.43007" lon="17.42502">
+    <name>SKB: Building</name>
+    <desc>low foundations of building</desc>
+  </wpt>
   <wpt lat="68.41977" lon="17.30587">
     <name>SQW: Tunnel</name>
     <desc>open tunnel, masonry; narrow tunnel entrance</desc>
@@ -565,7 +589,7 @@
   </wpt>
   <wpt lat="68.41015" lon="17.43089">
     <name>VCV: Bunker</name>
-    <desc>Regelbau-style bunker</desc>
+    <desc>Regelbau-style bunker entrance</desc>
   </wpt>
   <wpt lat="68.44801" lon="17.44064">
     <name>VDS: Tunnel</name>
@@ -595,13 +619,17 @@
     <name>VWZ: Building</name>
     <desc>bunker-style building; partial bunker roof</desc>
   </wpt>
+  <wpt lat="68.42958" lon="17.42539">
+    <name>VYV: Battle Station</name>
+    <desc>low-walled battle station</desc>
+  </wpt>
   <wpt lat="68.37508" lon="17.25357">
     <name>WHQ: Bunker</name>
     <desc>bunker with straight entrance; unknown</desc>
   </wpt>
   <wpt lat="68.43122" lon="17.42708">
     <name>WJB: Tunnel</name>
-    <desc>tunnel with door; narrow tunnel entrance</desc>
+    <desc>tunnel entrance walled shut; narrow tunnel entrance</desc>
   </wpt>
   <wpt lat="68.43312" lon="17.39099">
     <name>WJN: Bunker</name>
@@ -714,6 +742,10 @@
   <wpt lat="68.37513" lon="17.2532">
     <name>YYS: Tunnel</name>
     <desc>open tunnel, no masonry</desc>
+  </wpt>
+  <wpt lat="68.42968" lon="17.42545">
+    <name>YZD: Building</name>
+    <desc>low foundations of building</desc>
   </wpt>
   <wpt lat="68.39417" lon="17.25192">
     <name>ZHY: Bunker</name>
