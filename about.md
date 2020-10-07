@@ -12,7 +12,7 @@ Author: Chris Petrich, 7 Oct 2020.
 > I live in Narvik and put this web site together as a first attempt to making sense of the ruins around me. My vision would be something like the [trail guide of Evenestangen](https://www.evenes.kommune.no/selvbetjening/dokumentarkiv/kultur-og-fritid/friluftsliv/1030-evenestangen-tursti-hiking-trail/file.html).
 
 # Sources
-Sources are own observations and photos unless otherwise noted, i.e. there is no authoritive information on this site. Coordinates were determined during site visits and refined with reference to a map whenever possible ([atlas.nve.no](https://atlas.nve.no/)). A file containing all coordinates is availabe at (https://narvik-bunkers.no/narvik-bunkers.gpx)[/narvik-bunkers.gpx].
+Sources are own observations and photos unless otherwise noted, i.e. there is no authoritive information on this site. Coordinates were determined during site visits and refined with reference to a map whenever possible ([atlas.nve.no](https://atlas.nve.no/)). A file containing all coordinates is availabe at [https://narvik-bunkers.no/narvik-bunkers.gpx](/narvik-bunkers.gpx).
 
 # Warning
 Note that features on the map may not be publicly accessible or may be unsafe to access.
