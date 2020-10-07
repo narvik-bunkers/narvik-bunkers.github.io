@@ -191,6 +191,10 @@
     <name>HZT: Tunnel</name>
     <desc>tunnel with door; narrow tunnel entrance</desc>
   </wpt>
+  <wpt lat="68.37204" lon="17.60932">
+    <name>JBG: Bunker</name>
+    <desc>bunker with straight entrance</desc>
+  </wpt>
   <wpt lat="68.39435" lon="17.25046">
     <name>JJZ: Bunker</name>
     <desc>bunker; damaged</desc>
@@ -415,6 +419,10 @@
     <name>PRW: Tunnel</name>
     <desc>tunnel with door; narrow tunnel entrance</desc>
   </wpt>
+  <wpt lat="68.37188" lon="17.60904">
+    <name>PSJ: Bunker</name>
+    <desc>bunker with straight entrance but no visibility</desc>
+  </wpt>
   <wpt lat="68.41988" lon="17.30034">
     <name>PZC: Battle Station</name>
     <desc>battle platform</desc>
@@ -635,6 +643,10 @@
     <name>WJN: Bunker</name>
     <desc>ammunition bunker/shelter; walled battle station</desc>
   </wpt>
+  <wpt lat="68.42932" lon="17.43783">
+    <name>WKL: Bunker</name>
+    <desc>bunker with blast protection; multiple bunker rooms; block construction</desc>
+  </wpt>
   <wpt lat="68.37499" lon="17.25345">
     <name>WRG: Bunker</name>
     <desc>bunker with straight entrance; attached tunnel; embrasure</desc>
@@ -762,6 +774,10 @@
   <wpt lat="68.43039" lon="17.42284">
     <name>ZKJ: Building</name>
     <desc>building walls; building lowered into ground</desc>
+  </wpt>
+  <wpt lat="68.37156" lon="17.60613">
+    <name>ZKT: Building</name>
+    <desc>building walls; bunker-style building</desc>
   </wpt>
   <wpt lat="68.44239" lon="17.41551">
     <name>ZRZ: Tunnel</name>
