@@ -7,12 +7,12 @@ permalink: /about/
 # About
 The bunker map at [https://narvik-bunkers.no/](/) shows the location of defense-related structures built around 1939-1945 in the region around Narvik: bunkers, tunnels, battle stations, barraks. Almost all of them were built by German forces and were part either of the Atlantic Wall or of the defense of the iron ore port city of Narvik, *Festung Narvik*. For the purpose of this page the region around Narvik is anything east of Lødingen, i.e. essentially the area of the Artilleriegruppe Narvik *HKAA III/973*, comprising [HKB 31/973 Evenestangen](/?ll=68.45507,16.71409&z=16), HKB 32/973 Tjelneset, [HKB 33/973 Öyjordneset](/?ll=68.46614,17.47470&z=16), [HKB 34/973 Rombakken](/?ll=68.44268,17.39923&z=17), [HKB 35/973 Saltvikneset](/?ll=68.38319,17.04446&z=17), [HKB 36/973 (MKB 3/511) Framnes](/?ll=68.43406,17.39395&z=17), HKB 37/973 Ramnes, and MKB 2/516 Ramstad, and also [MKB 6/516 Korshamn/Porsøy](/?ll=68.41523,16.56511&z=14) which belonged to Artilleriegruppe Ofotfjord.
 
-Author: Chris Petrich, 5 Oct 2020.
+Author: Chris Petrich, 7 Oct 2020.
 
 > I live in Narvik and put this web site together as a first attempt to making sense of the ruins around me. My vision would be something like the [trail guide of Evenestangen](https://www.evenes.kommune.no/selvbetjening/dokumentarkiv/kultur-og-fritid/friluftsliv/1030-evenestangen-tursti-hiking-trail/file.html).
 
 # Sources
-Sources are own observations and photos unless otherwise noted, i.e. there is no authoritive information on this site. Coordinates were determined during site visits and refined with reference to a map whenever possible ([atlas.nve.no](https://atlas.nve.no/)).
+Sources are own observations and photos unless otherwise noted, i.e. there is no authoritive information on this site. Coordinates were determined during site visits and refined with reference to a map whenever possible ([atlas.nve.no](https://atlas.nve.no/)). A file containing all coordinates is availabe at (https://narvik-bunkers.no/narvik-bunkers.gpx)[/narvik-bunkers.gpx].
 
 # Warning
 Note that features on the map may not be publicly accessible or may be unsafe to access.
@@ -32,7 +32,7 @@ Data and photos on the site are provided under the [CC BY 4.0 license](https://c
 - Fjørtoft, J.E. (1983), Tyske kystfort i Norge. Available online at [www.nb.no](https://www.nb.no/items/7d97faa8fb12c6686d9aad0045a781a9).
 - Ytreberg, N.A. (1954), Narviks historie, Bind II: fra første verdenskrieg til våre dager. Available online at [www.nb.no](https://www.nb.no/items/87a234ef7ee0746cd39694350f1b10f0 historie).
 - 3\. Gebirgsdivision (1940), Kriegstagebuch. Narvik 06.04.-10.06.1940. Available online at [www.digitalarkivet.no](https://www.digitalarkivet.no/db20140310023126).
-- Kristensen, V.H. (1992), Kanonene på Framnes, In *Årbok for Narvik 2012*, Ofoten slekts- og historielag, pp. 28-31. Check availability at [Narvik Museum](https://www.museumnord.no/en/narvik/).
+- Kristensen, V.H. (1992), Kanonene på Framnes, In *Årbok for Narvik 2012*, Ofoten slekts- og historielag, pp. 28-31. Introduction available at [narvikhistorie.wordpress.com](https://narvikhistorie.wordpress.com/2012/12/17/kanonene-pa-framnes/), check availability of article at [Narvik Museum](https://www.museumnord.no/en/narvik/).
 
 # Acknowledgements of Free Stuff
 The web site is hosted by [GitHub Pages](https://pages.github.com//). The framework generating the map is [leaflet.js](https://leafletjs.com/), the map tiles are provided by [Kartverket](https://www.kartverket.no/data/API-er-og-tjenester/), the i-icon leading to this page is from [Font Awesome](https://fontawesome.com/license/free).
