@@ -27,6 +27,10 @@
     <name>BNM: Building</name>
     <desc>building lowered into ground</desc>
   </wpt>
+  <wpt lat="68.41748" lon="17.43141">
+    <name>BNX: Platform</name>
+    <desc>small platform/pedestal</desc>
+  </wpt>
   <wpt lat="68.43239" lon="17.38828">
     <name>BVH: Bunker</name>
     <desc>bunker with straight entrance; 3-direction roofed lookout; trench</desc>
@@ -127,6 +131,10 @@
     <name>GDG: Building</name>
     <desc>low foundations of building; building lowered into ground</desc>
   </wpt>
+  <wpt lat="68.41324" lon="17.42956">
+    <name>GDR: Tunnel</name>
+    <desc>open tunnel, no masonry</desc>
+  </wpt>
   <wpt lat="68.44747" lon="17.40774">
     <name>GLZ: Tunnel</name>
     <desc>open tunnel, no masonry</desc>
@@ -138,6 +146,10 @@
   <wpt lat="68.3711" lon="17.42581">
     <name>GNV: Building</name>
     <desc>building lowered into ground</desc>
+  </wpt>
+  <wpt lat="68.44743" lon="17.41075">
+    <name>GPH: Marine Launch</name>
+    <desc>marine launch point</desc>
   </wpt>
   <wpt lat="68.42004" lon="17.37712">
     <name>GVQ: Bunker</name>
@@ -235,6 +247,10 @@
     <name>KDP: Building</name>
     <desc>building lowered into ground</desc>
   </wpt>
+  <wpt lat="68.41757" lon="17.43158">
+    <name>KDZ: Platform</name>
+    <desc>small platform/pedestal</desc>
+  </wpt>
   <wpt lat="68.43238" lon="17.43619">
     <name>KMK: Battle Station</name>
     <desc>embrasure; bunker with blast protection; attached tunnel</desc>
@@ -246,6 +262,10 @@
   <wpt lat="68.37158" lon="17.42913">
     <name>KPD: Building</name>
     <desc>building lowered into ground</desc>
+  </wpt>
+  <wpt lat="68.44744" lon="17.41884">
+    <name>KPQ: Marine Launch</name>
+    <desc>marine launch point</desc>
   </wpt>
   <wpt lat="68.43341" lon="17.42718">
     <name>KVY: Tunnel</name>
@@ -467,6 +487,10 @@
     <name>QVR: Building</name>
     <desc>building lowered into ground</desc>
   </wpt>
+  <wpt lat="68.41396" lon="17.43163">
+    <name>QWC: Building</name>
+    <desc>low foundations of building</desc>
+  </wpt>
   <wpt lat="68.43572" lon="17.43274">
     <name>RCM: Tunnel</name>
     <desc>tunnel with door; wide tunnel entrace</desc>
@@ -478,6 +502,10 @@
   <wpt lat="68.37183" lon="17.42785">
     <name>RGH: Building</name>
     <desc>building lowered into ground</desc>
+  </wpt>
+  <wpt lat="68.44767" lon="17.41535">
+    <name>RGS: Marine Launch</name>
+    <desc>marine launch point</desc>
   </wpt>
   <wpt lat="68.43224" lon="17.43601">
     <name>RNB: Battle Station</name>
@@ -695,6 +723,10 @@
     <name>XMT: Building</name>
     <desc>low foundations of building; building lowered into ground</desc>
   </wpt>
+  <wpt lat="68.41352" lon="17.42918">
+    <name>XNG: Tunnel</name>
+    <desc>open tunnel, no masonry</desc>
+  </wpt>
   <wpt lat="68.44426" lon="17.43423">
     <name>XVM: Tunnel</name>
     <desc>tunnel with door; narrow tunnel entrance</desc>
@@ -706,6 +738,10 @@
   <wpt lat="68.3722" lon="17.42655">
     <name>XWK: Building</name>
     <desc>building lowered into ground</desc>
+  </wpt>
+  <wpt lat="68.4475" lon="17.41142">
+    <name>XWV: Marine Launch</name>
+    <desc>marine launch point</desc>
   </wpt>
   <wpt lat="68.44327" lon="17.43775">
     <name>YDD: Tunnel</name>
