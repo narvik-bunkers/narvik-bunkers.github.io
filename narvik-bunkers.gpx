@@ -163,6 +163,10 @@
     <name>GWY: Bunker</name>
     <desc>bunker with top-entrance or no entrance; block construction</desc>
   </wpt>
+  <wpt lat="68.44298" lon="17.41085">
+    <name>GXW: Tunnel</name>
+    <desc>tunnel with barricaded entrance; narrow tunnel entrance</desc>
+  </wpt>
   <wpt lat="68.40545" lon="17.41686">
     <name>HGG: Bunker</name>
     <desc>bunker with straight entrance; embrasure</desc>
@@ -577,7 +581,7 @@
   </wpt>
   <wpt lat="68.43093" lon="17.42234">
     <name>SSG: Tunnel</name>
-    <desc>open tunnel, masonry; narrow tunnel entrance</desc>
+    <desc>open tunnel, masonry; narrow tunnel entrance; damaged</desc>
   </wpt>
   <wpt lat="68.37111" lon="17.25063">
     <name>SZM: Bunker</name>
