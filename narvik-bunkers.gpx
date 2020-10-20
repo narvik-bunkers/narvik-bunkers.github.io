@@ -63,6 +63,10 @@
     <name>CHG: Pit</name>
     <desc>pit</desc>
   </wpt>
+  <wpt lat="68.43772" lon="17.38862">
+    <name>CJC: Tunnel</name>
+    <desc>open tunnel, no masonry; narrow tunnel entrance; damaged</desc>
+  </wpt>
   <wpt lat="68.43304" lon="17.43673">
     <name>CPM: Bunker</name>
     <desc>bunker with straight entrance</desc>
@@ -178,6 +182,10 @@
   <wpt lat="68.45365" lon="16.71023">
     <name>HHZ: Battle Station</name>
     <desc>battle platform</desc>
+  </wpt>
+  <wpt lat="68.44194" lon="17.39605">
+    <name>HJM: Trench</name>
+    <desc>lookout at the end of a trench</desc>
   </wpt>
   <wpt lat="68.44537" lon="17.43662">
     <name>HQH: Tunnel</name>
@@ -361,7 +369,7 @@
   </wpt>
   <wpt lat="68.4329" lon="17.43604">
     <name>MTW: Battle Station</name>
-    <desc>battle station at end of trench; roof over trench; trench</desc>
+    <desc>battle station at end of a trench; roof over trench; trench</desc>
   </wpt>
   <wpt lat="68.37252" lon="17.42136">
     <name>MVJ: Building</name>
@@ -411,6 +419,10 @@
     <name>NYC: Battle Station</name>
     <desc>high-walled battle station; ammunition bunker/shelter</desc>
   </wpt>
+  <wpt lat="68.43998" lon="17.39228">
+    <name>NYP: Trench</name>
+    <desc>lookout at the end of a trench</desc>
+  </wpt>
   <wpt lat="68.44255" lon="17.39896">
     <name>PGX: Bunker</name>
     <desc>bunker with straight entrance; multiple bunker rooms; attached tunnel</desc>
@@ -457,7 +469,7 @@
   </wpt>
   <wpt lat="68.44267" lon="17.41015">
     <name>PZZ: Battle Station</name>
-    <desc>battle station at end of trench; trench</desc>
+    <desc>battle station at end of a trench; trench</desc>
   </wpt>
   <wpt lat="68.22552" lon="17.33645">
     <name>QBM: Dock</name>
@@ -553,11 +565,11 @@
   </wpt>
   <wpt lat="68.446184" lon="17.435561">
     <name>SHS: Bunker</name>
-    <desc>bunker with straight entrance; battle station at end of trench; low-walled battle station; trench</desc>
+    <desc>bunker with straight entrance; battle station at end of a trench; low-walled battle station; trench</desc>
   </wpt>
   <wpt lat="68.44762" lon="17.4124">
     <name>SJD: Battle Station</name>
-    <desc>battle station at end of trench; trench</desc>
+    <desc>battle station at end of a trench; trench</desc>
   </wpt>
   <wpt lat="68.37532" lon="17.25288">
     <name>SJQ: Battle Station</name>
@@ -605,7 +617,7 @@
   </wpt>
   <wpt lat="68.43324" lon="17.43653">
     <name>TLY: Battle Station</name>
-    <desc>battle station at end of trench; roof over trench; trench</desc>
+    <desc>battle station at end of a trench; roof over trench; trench</desc>
   </wpt>
   <wpt lat="68.37257" lon="17.4199">
     <name>TML: Building</name>
@@ -655,6 +667,10 @@
     <name>VQG: Unidentified</name>
     <desc>unidentified</desc>
   </wpt>
+  <wpt lat="68.43971" lon="17.39222">
+    <name>VQR: Unidentified</name>
+    <desc>unidentified</desc>
+  </wpt>
   <wpt lat="68.43427" lon="17.39401">
     <name>VWZ: Building</name>
     <desc>bunker-style building; partial bunker roof</desc>
@@ -701,7 +717,7 @@
   </wpt>
   <wpt lat="68.441605" lon="17.388916">
     <name>XBH: Battle Station</name>
-    <desc>battle station at end of trench; trench</desc>
+    <desc>battle station at end of a trench; trench</desc>
   </wpt>
   <wpt lat="68.43791" lon="17.43002">
     <name>XBS: Tunnel</name>
@@ -759,6 +775,10 @@
     <name>YGN: Building</name>
     <desc>low foundations of building</desc>
   </wpt>
+  <wpt lat="68.41787" lon="17.3886">
+    <name>YHL: Tunnel</name>
+    <desc>tunnel with barricaded entrance; narrow tunnel entrance</desc>
+  </wpt>
   <wpt lat="68.42503" lon="17.43057">
     <name>YNT: Bunker</name>
     <desc>bunker with straight entrance; damaged; remarkable/unusual</desc>
@@ -785,7 +805,7 @@
   </wpt>
   <wpt lat="68.44577" lon="17.43547">
     <name>YXV: Bunker</name>
-    <desc>bunker with straight entrance; battle station at end of trench; low-walled battle station; trench</desc>
+    <desc>bunker with straight entrance; battle station at end of a trench; low-walled battle station; trench</desc>
   </wpt>
   <wpt lat="68.44679" lon="17.40824">
     <name>YYH: Tunnel</name>
