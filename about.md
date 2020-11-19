@@ -10,7 +10,7 @@ permalink: /about/
 # About
 The bunker map at [https://narvik-bunkers.no/](/) shows the location of defense-related structures built around 1939-1945 in the region around Narvik: bunkers, tunnels, battle stations, barraks. Almost all of them were built by German forces and were part either of the Atlantic Wall or of the defense of the iron ore port city of Narvik, *Festung Narvik*. For the purpose of this page the region around Narvik is anything east of Lødingen, i.e. essentially the area of the Artilleriegruppe Narvik *HKAA III/973*, comprising [HKB 31/973 Evenestangen](/?ll=68.45507,16.71409&z=16), HKB 32/973 Tjelneset, [HKB 33/973 Öyjordneset](/?ll=68.46614,17.47470&z=16), [HKB 34/973 Rombakken](/?ll=68.44268,17.39923&z=17), [HKB 35/973 Saltvikneset](/?ll=68.38319,17.04446&z=17), [HKB 36/973 (MKB 3/511) Framnes](/?ll=68.43406,17.39395&z=17), HKB 37/973 Ramnes, and MKB 2/516 Ramstad, and also [MKB 6/516 Korshamn/Porsøy](/?ll=68.41523,16.56511&z=14) which belonged to Artilleriegruppe Ofotfjord.
 
-Author: Chris Petrich, 17 Nov 2020
+Author: Chris Petrich, 20 Nov 2020
 
 > I live in Narvik and put this web site together as a first attempt to making sense of the ruins around me. My vision would be something like the [trail guide of Evenestangen](https://www.evenes.kommune.no/selvbetjening/dokumentarkiv/kultur-og-fritid/friluftsliv/1030-evenestangen-tursti-hiking-trail/file.html).
 
