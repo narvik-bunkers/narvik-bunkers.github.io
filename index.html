@@ -62,8 +62,8 @@
             
             if (params.has('pos')) {
                 var pos = params.get('pos');
-                if (pos.length == 3) {
-                    pos_code = pos;
+                if (pos.length >= 3) {
+                    pos_code = pos.match(/.{1,3}/g);
                 }
             }
 
@@ -127,7 +127,13 @@ var infoCtrl = new infoControl({position: 'topleft'}).addTo(map);
                     popupAnchor:  [0, -5]
                 }
             });
-            
+            var HighlightMarker = L.Icon.extend({
+                options: {
+                    iconSize:     [15, 15],
+                    iconAnchor:   [7, 7],
+                    popupAnchor:  [0, -7]
+                }
+            });
             var icons = {'circle-red': new BasicMarker({iconUrl: 'icons/circle-ring-red-11.png'}),
                          'rect-red': new BasicMarker({iconUrl: 'icons/rect-ring-red-11.png'}),
                          'u-red': new BasicMarker({iconUrl: 'icons/u-ring-red-11.png'}),
@@ -135,7 +141,8 @@ var infoCtrl = new infoControl({position: 'topleft'}).addTo(map);
                          'circle-orange': new BasicMarker({iconUrl: 'icons/circle-ring-orange-11.png'}),
                          'circle-black': new BasicMarker({iconUrl: 'icons/circle-black-11.png'}),
                          'circle-dot-orange': new BasicMarker({iconUrl: 'icons/circle-dot-ring-orange-11.png'}),
-                         'circle-cross-orange': new BasicMarker({iconUrl: 'icons/circle-cross-ring-orange-11.png'})
+                         'circle-cross-orange': new BasicMarker({iconUrl: 'icons/circle-cross-ring-orange-11.png'}),
+                         'circle-blue-large': new HighlightMarker({iconUrl: 'icons/circle-ring-blue-15.png'})
                         };
                         
             function geojsonEachFeture(feature, layer) {
@@ -159,11 +166,23 @@ var infoCtrl = new infoControl({position: 'topleft'}).addTo(map);
                     ).addTo(map);
                     
                     if (pos_code != -1) {
+                        var xmin = 1e10;
+                        var xmax = -1e10;
+                        var ymin = 1e10;
+                        var ymax = -1e10;
                         location_data.data.features.forEach(function(item,index) {
-                            if (item.properties.name.localeCompare(pos_code) == 0) {
-                                map.setView([item.geometry.coordinates[1],item.geometry.coordinates[0]], zoom_value);
-                                /* what's missing is to draw a circle around this marker */
+                            if (pos_code.indexOf(item.properties.name) >= 0) {
+                                xmin = item.geometry.coordinates[0] < xmin ? item.geometry.coordinates[0] : xmin;
+                                xmax = item.geometry.coordinates[0] > xmax ? item.geometry.coordinates[0] : xmax;
+                                ymin = item.geometry.coordinates[1] < ymin ? item.geometry.coordinates[1] : ymin;
+                                ymax = item.geometry.coordinates[1] > ymax ? item.geometry.coordinates[1] : ymax;
+                                /* place an icon here */
+                                L.marker([item.geometry.coordinates[1],item.geometry.coordinates[0]],{icon: icons['circle-blue-large']}).addTo(map);
                             }
+                            if ((xmin == xmax) && (ymin == ymax))
+                                map.setView([ymin, xmin], zoom_value);
+                            else if ((xmin < xmax) || (ymin < ymax))
+                                map.fitBounds([[ymin-0.001, xmin-0.003],[ymax+0.001, xmax+0.003]]);
                         });
                         
                     }
