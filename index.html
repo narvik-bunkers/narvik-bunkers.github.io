@@ -59,11 +59,11 @@
                     }
                 }
             }
-            
+
             if (params.has('pos')) {
                 var pos = params.get('pos');
                 if (pos.length >= 3) {
-                    pos_code = pos.match(/.{1,3}/g);
+                    pos_code = pos.split('-');
                 }
             }
 
@@ -180,12 +180,11 @@ var infoCtrl = new infoControl({position: 'topleft'}).addTo(map);
                                 /* place an icon here, place behind marker so we can still click the marker */
                                 L.marker([item.geometry.coordinates[1],item.geometry.coordinates[0]],{icon: icons['circle-blue-large'], zIndexOffset: -1000}).addTo(map);
                             }
-                            if ((xmin == xmax) && (ymin == ymax))
-                                map.setView([ymin, xmin], zoom_value);
-                            else if ((xmin < xmax) || (ymin < ymax))
-                                map.fitBounds([[ymin-0.001, xmin-0.003],[ymax+0.001, xmax+0.003]]);
                         });
-                        
+                        if ((xmin == xmax) && (ymin == ymax))
+                            map.setView([ymin, xmin], zoom_value);
+                        else if ((xmin < xmax) || (ymin < ymax))
+                            map.fitBounds([[ymin-0.001, xmin-0.003],[ymax+0.001, xmax+0.003]]);
                     }
                 }
             }
