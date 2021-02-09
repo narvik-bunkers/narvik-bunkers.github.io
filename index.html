@@ -68,7 +68,8 @@
             }
 
             var url2 = 'narvik-bunkers.json';
-            var map = L.map('map',{zoomSnap:0}).fitBounds([[68.428, 17.37],[68.45, 17.445]]); // or use setView() to set the zoom level explicitly
+            var map = L.map('map',{zoomSnap:0}).fitBounds([[68.428, 17.37],[68.45, 17.54]]); // or use setView() to set the zoom level explicitly
+            //var map = L.map('map',{zoomSnap:0}).fitBounds([[68.428, 17.37],[68.45, 17.445]]); // or use setView() to set the zoom level explicitly
             if (center_loc != -1) {
                 map.setView(center_loc, zoom_value);
             }
