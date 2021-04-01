@@ -71,7 +71,7 @@ This installation had excellent control of the harbor, and taking out a bunker w
 
 There are a number of narrow tunnels in the region, some with multiple exits, and some with a room (presumably a shelter) along the way. They resemble each other stylistically but it is quite fun to find them. They may be passages or access ways to an embrasure. They are generally quite low, maybe 1.7 m in height and appear to be largely in their original state.
 
-[![Exit of a narrow German WW2 tunnel. (KSJ)](/images/narvik-bunkers_KSJ_exit_640.jpg)](/?pos=KSJ)
+[![Narrow German WW2 tunnels around Narvik.](/images/narvik-bunkers_small-tunnels_collage_640.jpg)](/?pos=NQL-WRG-KSJ-NKN)
 
 * The tunnel at [Oscarsborg](/?pos=RNB-KMK) connects two embrasures with a shelter and is right around the corner of a neat trench that leads to a small command bunker.
 * Up the road on [Fagernesfjellet](/?pos=BYW) is a dead-end tunnel that could have been a shelter.
