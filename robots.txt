@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /?
+
+Sitemap: https://www.narvik-bunkers.no/sitemap.xml
