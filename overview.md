@@ -91,7 +91,12 @@ There are a number of narrow tunnels in the region, some with multiple exits, an
 
 The "back entrance" has a well-developed path leading up to it but is walled shut. There is a small lookout at the end of a trench overseeing this path. To get to the main entrance follow one of the trails or the trench up the hill. The narrow bunker entrance is boasting 2 m thick walls. The design of the entrance area follows Regelbau standard with a view port from the crew room followed by a heavy steel door (Panzertür). Need to climb/step through the upper section of the steel door. The corridor from the entrance ends in a staircase that leads down into a wide, open tunnel. Some interior walls, the doors, damaged furniture, and sanitary installations are presumably post-war modifications to turn this bunker into a civilian bomb shelter. Surveying marks can be seen along the floor. The bunker is dry apart from possibly a puddle at the steel door entrance, but the air may be very humid.
 
-* Ammunition depot and shelter [opposite Sjømannshjemmet on Havnegata](/?pos=ZJL). The loop tunnel has two exits presumably for safety reasons. The tunnel floor is usually wet (slightly muddy, nothing serious).
+* Ammunition depot and shelter [opposite Sjømannshjemmet on Havnegata](/?pos=ZJL). 
+
+[![Photo collage of the German WW2 tunnel opposite Sjømannshjemmet, Narvik. (ZJL)](/images/narvik-bunkers_ZJL_collage_640.jpg)](/?pos=ZJL)
+
+The loop tunnel has two exits presumably for safety reasons. The tunnel floor is usually wet (slightly muddy, nothing serious).
+
 * Ammunition depot and shelter at [Emmenes](/?pos=SQW-RNY). The branching tunnel has two exits presumably for safety reasons. The north entrance gets seasonally flooded.
 
 Author: Chris Petrich, License: CC BY 4.0, more on the [About page](/about/).
