@@ -47,7 +47,6 @@ Virtually all installations that I found are close to roads or trails, either st
 
 There are a couple of war-related installations in Narvik that are not of German origin. Most prominent is the [LKAB Bolagstunnellen](/?pos=JTB-BBY) (cf. [story in Fremover](https://www.fremover.no/lkab/narvik/demag/sjekk-den-gamle-bolagstunnelen/s/5-17-332419)), which was built before the German occupation, used as a civilian bomb shelter, and only closed in 2006. Also, the tunnel [behind Lasarettet](/?pos=WRR) was built pre-war as a civilian bomb shelter, and there was supposed to be one in Kleiva, maybe this [bunker "without entrance"](/?pos=NMS), not sure about that one, though.
 Further candidates for LKAB constructions are the shelter at [Nedre lokstall](/?pos=MLH), the tunnel at [Villa Meyer](/?pos=NWJ-DTD), and possibly the [foot tunnel next to Frydenlundstunnelen](/?ll=68.43421,17.40476).
-In addition to that, I have the feeling that the little [single-room shelter at Framnes](/?pos=GWY), the [Arbeiderveien pillbox](/?pos=QNW), and the somewhat hidden [bunker at Jaklamyra](/?pos=MBZ) could be Norwegian designed. Candidates for Norwegian post-war construction are the [tunnel in Lodve Langesgt.](/?pos=NXG) and the two small [Malmveien bunkers](/?pos=JCC-ZLR). On Øyjord I wonder whether the [installation at Langstrand/Øyjordtangen](/?pos=VRZ-HKV-YSK-NZX-CKM) is a Norwegian construction built prior to the German invasion.
 
 ## Bunker trips for the whole family around Narvik
 
@@ -61,7 +60,7 @@ Of the places listed below, the bunkers at [Tangodden](/?pos=PQN) and installati
 
 * A walk from Durmålshaugen to the small command bunker at [Framnes](/?pos=BVH) leads past a number of air defense stations (each with their own small ammunition bunkers). This had been described in some detail in [Fremover in 2015](https://www.fremover.no/lokale-nyheter/narvik/historisk-vandring-til-narvik-fort/s/5-17-74261). The little command bunker has a great view. No flashlight necessary here.
 
-* A proper Regelbau bunker right next to artillery and machine gun positions can be seen at [Smihaugen/Fagernes](/?pos=VCV-PWX-JGV) besides a picnic shelter (gapahug).
+* A proper Regelbau bunker right next to artillery(?) and machine gun positions can be seen at [Smihaugen/Fagernes](/?pos=VCV-PWX-JGV) besides a picnic shelter (gapahug).
 
 [![Photo collage of entrance area of a German WW2 634 Regelbau bunker in Narvik. (VCV)](/images/narvik-bunkers_VCV_collage_640.jpg)](/?pos=VCV)
 
