@@ -84,7 +84,7 @@ There are a number of narrow tunnels in the region, some with multiple exits, an
 
 ### Big tunnels
 
-* Behind Museum Nord - Narvik and [off of Administrasjonsveien](/?pos=CYN-WJB), possibly the biggest bunker in Narvik. 
+* Behind Museum Nord - Narvik and [off of Administrasjonsveien](/?pos=CYN-WJB), possibly the biggest readily accessible bunker in Narvik. 
 
 [![Photo collage of the German WW2 bunker and tunnel behind Administrasjonsveien, Narvik. (CYN)](/images/narvik-bunkers_CYN_collage_640.jpg)](/?pos=CYN)
 
