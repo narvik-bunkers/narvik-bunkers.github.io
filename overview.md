@@ -31,7 +31,7 @@ Among the concrete-heavy structures is a pillbox bunker with decent reinforcemen
 
 A compact overview of the design style that I would call typical for the region can be seen in the [Oscarsborg/Fjellheim](/?pos=GCT-RNB-KMK-MTW-TLY-CPM-SHH) area: embrasure, tunnel with shelter, command post, trenches, machine gun positions, group bunkers. A different style like the block-style bunker seen at [Kleiva/Fjellheim](/?pos=WKL) is also seen in [Kjelde](/?pos=NJQ-BRD-XZB).
 
-Otherwise noteworthy is a communication bunker (sambandsbunker) [up the hill at Fagernesfjellet](/?pos=NRJ) that seems to have remnants of fixtures for electrical installations at the wall. There is what seems to be a [Koch Bunker at Framneslia](/?pos=YKR), and what may have been an [ammunition storage in Mattisjorda/Håkvikdalen](/?pos=TML-MVJ-GDG-XMT-QVR-KDP-XWK-BNM-TVZ-GNV-RGH-NDX-KPD) that had several buildings in a very regular pattern.
+Otherwise noteworthy is a communication bunker (sambandsbunker) [up the hill at Fagernesfjellet](/?pos=NRJ) that seems to have remnants of fixtures for electrical installations at the wall. There is what seems to be a [Koch Bunker at Framneslia](/?pos=YKR), and what may have been an [ammunition storage in Mattisjorda/Håkvikdalen](/?pos=TML-MVJ-GDG-XMT-QVR-KDP-XWK-BNM-TVZ-GNV-RGH-NDX-KPD) with several buildings in a regular pattern.
 
 ### Doors
 
@@ -39,7 +39,7 @@ A stroll through town wouldn't be complete without noticing the different style 
 
 ### Machine gun and artillery positions
 
-Just about every machine gun or observation point seems to be oriented toward the water: Narvik harbor or other destinations, along beaches, or across the fjord, i.e. for sea defense. Possibly the most notable exception is the defense line of [machine gun positions at Tøttadalen](/?pos=TYH-QPJ-JXG-NZM-DXJ-MPL-GHX-GHM) that face East supposedly to prevent land-borne advance along the coast toward Karistranda and up the valley toward Forsnesvatnet (in addition, the positions closest to the coast also overlooked the fjord). Similarly, the two [fortified machine gun positions at Oscarsborg](/?pos=RNB-KMK) are overlooking the approach from Fagernestoppen. There is a suspicious [string of bunkers or tunnels](/?pos=WQV-XDY-WHG-PQC) that may have served to shelter troups intended to block land advance at Herjangen.
+Just about every machine gun or observation point seems to be oriented toward the water: Narvik harbor or other destinations, along beaches, or across the fjord, i.e. for sea defense. Possibly the most notable exception is the defense line of [machine gun positions at Tøttadalen](/?pos=TYH-QPJ-JXG-NZM-DXJ-MPL-GHX-GHM) that face East supposedly to prevent land-borne advance along the coast toward Karistranda and up the valley toward Forsnesvatnet (in addition, the positions closest to the coast also overlooked the fjord). Similarly, the two [fortified machine gun positions at Oscarsborg](/?pos=RNB-KMK) are overlooking the approach from Fagernestoppen. There is a suspicious [string of bunkers or tunnels](/?pos=WQV-XDY-WHG-PQC) at Herjangen that may have served to shelter troups trying to block land advance.
 There are small machine gun posts that were apparently intended to guard local installations, for example [at Sykehusveien](/?pos=SWV-ZNX), [off of Administrasjonsveien](/?pos=TQC), [at Utsikten](/?pos=TTH), [on Øyjord](/?pos=MVT), and [in Kjelde](/?pos=LBX-RSZ), and a few [pillboxes in Narvik (since removed)](/?pos=TPG-XPP-BGR) that would have been good to monitor traffic within the city. Anti-aircraft artillery was presumably located at positions [from Durmålshaugen to Framnes](/?pos=TVP-XVX-KNS-CYY-CDW-WJN-KXJ-YXK) and at [Toppåsen/Øyjord](/?pos=WSZ-JLV-MMD-TCH).
 
 Virtually all installations that I found are close to roads or trails, either still in use or overgrown (my discovery may be biased toward those). Of the positions I found, the Pole of Inaccessibility is [one of the machine gun position of the Tøttadalen defense line](/?pos=JXG).
@@ -62,7 +62,7 @@ Of the places listed below, the bunkers at [Tangodden](/?pos=PQN) and installati
 
 * A walk from Durmålshaugen to the small command bunker at [Framnes](/?pos=BVH) leads past a number of air defense stations (each with their own small ammunition bunkers). This had been described in some detail in [Fremover in 2015](https://www.fremover.no/lokale-nyheter/narvik/historisk-vandring-til-narvik-fort/s/5-17-74261). The little command bunker has a great view. No flashlight necessary here.
 
-* A proper Regelbau bunker right next to artillery(?) and machine gun positions can be seen at [Smihaugen/Fagernes](/?pos=VCV-PWX-JGV) besides a picnic shelter (gapahug).
+* A proper Regelbau bunker right next to artillery(?) and machine gun positions can be seen at [Smihaugen/Fagernes](/?pos=VCV-PWX-JGV) besides a picnic shelter (gapahuk).
 
 [![Photo collage of entrance area of a German WW2 634 Regelbau bunker in Narvik. (VCV)](/images/narvik-bunkers_VCV_collage_640.jpg)](/?pos=VCV)
 
@@ -82,7 +82,7 @@ There are a number of narrow tunnels in the region, some with multiple exits, an
 * There are tunnels with embrasures at Einebærneset: [south](/?pos=ZHY-XLW) and [north](/?pos=DVY-CBR-VLG).
 * The tunnel at [Grindjord](/?pos=WRG) leads to an embrasure, contains steps and a shelter room and is readily accessible from the road.
 * The (ammunition?) bunker at [Beisfjord](/?pos=QSW) has two exists, which is almost like a tunnel.
-* The tunnel at [Øyjordtangen](/?pos=HKV-YSK) that I suspect to have been built by Norwegian forces.
+* The tunnel at [Øyjordtangen](/?pos=HKV-YSK).
 
 ### Big tunnels
 
