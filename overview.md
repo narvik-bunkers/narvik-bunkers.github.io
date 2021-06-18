@@ -76,6 +76,8 @@ There are a number of narrow tunnels in the region, some with multiple exits, an
 
 * The tunnel at [Oscarsborg](/?pos=RNB-KMK) connects two embrasures with a shelter and is right around the corner of a neat trench that leads to a small command bunker.
 * Up the road on [Fagernesfjellet](/?pos=BYW) is a dead-end tunnel that could have been a shelter.
+* Another dead-end tunnel is at [Storåsen next to the stadion](/?pos=RWR), and there is a [tunnel nearby that had been cut off](/?pos=BWD).
+* Yet another dead-end tunnel is at [Furuholtet](/?pos=HQH).
 * The tunnel at [Lillevika](/?pos=YYH-NCZ-GLZ) connects several machine gun stations and has a bunch of rocks to climb over inside. 
 * On Emmenesveten are a [short tunnel](/?pos=NQL-VHN) with shelter room for a machine gun position and a [longer tunnel](/?pos=KSJ-QZH) that gives access to an embrasure.
 * A narrow tunnel at [Emmenes](/?pos=NKN-KJS) connects two machine gun positions and would presumably have served as an uncomfortable shelter.
