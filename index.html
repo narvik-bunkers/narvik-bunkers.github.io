@@ -32,6 +32,7 @@
     <body>
         <div id="map"></div>
         <script>
+
             var center_loc = -1;
             var zoom_value = 18;
             var pos_code = -1;
@@ -68,8 +69,20 @@
             }
 
             var url2 = 'narvik-bunkers.json';
+            
+            L.tmhandler = L.Handler.extend({
+                addHooks: function() {
+                    L.DomEvent.on(this._map._container, 'touchmove', this._touch, this);
+                },
+                _touch: function(e) {
+                    cpos = map.getBounds().getCenter().lat + ' ' + map.getBounds().getCenter().lng;
+                }
+            });
+            L.Map.addInitHook('addHandler', 'ttmove', L.tmhandler);
+            
             var map = L.map('map',{zoomSnap:0}).fitBounds([[68.428, 17.37],[68.45, 17.54]]); // or use setView() to set the zoom level explicitly
             //var map = L.map('map',{zoomSnap:0}).fitBounds([[68.428, 17.37],[68.45, 17.445]]); // or use setView() to set the zoom level explicitly
+            map.ttmove.enable();
             if (center_loc != -1) {
                 map.setView(center_loc, zoom_value);
             }
@@ -79,10 +92,25 @@
             }).addTo(map);
             var locate = L.control.locate({setView:true, maxZoom:16, locateOptions:{enableHighAccuracy:true}}).addTo(map);
             map.on('locationfound', function(e){locate.options.strings.popup = e.latlng.lat.toFixed(6) + ', ' + e.latlng.lng.toFixed(6);});
-            
-            var scalebar = L.control.scale({metric:true, imperial:false}).addTo(map);
-            
             const req = new XMLHttpRequest();
+            var cpos = 'none';
+            var ocpos = 'init';
+            const requestTag = Math.floor(Math.random() * 0x1000000).toString(16);
+            map.on('mousemove', function (e) {cpos = e.latlng.lat + ' ' + e.latlng.lng;} );
+            map.on('zoomend', function(e) {
+                var query = 't='+requestTag;
+                query += '&l=' + encodeURIComponent(cpos);
+                query += '&z=' + encodeURIComponent(Math.round(map.getZoom()));
+                if (ocpos === 'init') {
+                    query += "&r="+encodeURIComponent(document.referrer);
+                }
+                if (cpos !== ocpos) {
+                    req.open("GET", "https://xdat.eu/narvik-bunkers.no/?"+query, true);
+                    req.send();
+                    ocpos = cpos;
+                }
+            });
+            var scalebar = L.control.scale({metric:true, imperial:false}).addTo(map);
             
 var infoControl =  L.Control.extend({
 
@@ -192,8 +220,6 @@ var infoCtrl = new infoControl({position: 'topleft'}).addTo(map);
             }
             http.open("GET", url2, true);
             http.send();
-            req.open("GET", "https://xdat.eu/narvik-bunkers.no/?r="+encodeURIComponent(document.referrer), true);
-            req.send();
 
             map.on('contextmenu', function(e) {
                 var marker = new L.marker(e.latlng,{
