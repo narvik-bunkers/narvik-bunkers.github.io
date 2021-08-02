@@ -82,6 +82,7 @@
             
             var scalebar = L.control.scale({metric:true, imperial:false}).addTo(map);
             
+            const req = new XMLHttpRequest();
             
 var infoControl =  L.Control.extend({
 
@@ -191,7 +192,9 @@ var infoCtrl = new infoControl({position: 'topleft'}).addTo(map);
             }
             http.open("GET", url2, true);
             http.send();
-            
+            req.open("GET", "https://xdat.eu/narvik-bunkers.no/?r="+encodeURIComponent(document.referrer), true);
+            req.send();
+
             map.on('contextmenu', function(e) {
                 var marker = new L.marker(e.latlng,{
                     draggable: true,
