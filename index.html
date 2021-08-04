@@ -4,11 +4,12 @@
         <title>Map | Narvik Bunkers</title>
         <meta charset="utf-8">
         <meta name="author" content="Chris Petrich">
-        <meta name="description" content="Location map of WW2 bunkers, tunnels and structures in and around Narvik, mostly built by German forces, among them Regelbau bunkers 634 and 628. Some tunnels feature German steel doors 434P01 or 436P01, or gas doors 19P7 or 723P3.">
+        <meta name="description" content="Location map of WW2 bunkers, tunnels and structures in and around Narvik, Ofoten, Norway, mostly built by German forces, among them Regelbau bunkers 634 and 628. Some tunnels feature German steel doors 434P01 or 436P01, or gas doors 19P7 or 723P3.">
 
         <!-- tell mobile browser to turn off scaling -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
@@ -26,13 +27,42 @@
                 height: 100%;
                 width: 100vw;
             }
-            .leaflet-popup-content { min-width: 15em; max-width:15em;} */ /* this typically scales with text width, so fix it here. */
+            .full {
+                height: 100%;
+                width: 100vw;
+                position: relative;
+            }
+            .leaflet-popup-content { min-width: 15em; max-width:15em;}  /* this typically scales with text width, so fix it here. */
+            #infoBanner {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(255,255,255,0.7);
+                color: black;
+                padding: 1em 2em 1em 2em;
+                font: italic small-caps bold 100% cursive;
+                z-index: 1001;
+                display: none;
+            }
+            #infoBannerClose {
+                position: absolute;
+                top:0.2em;
+                right:0.2em;
+                font-size: 120%;
+            }
         </style>
     </head>
     <body>
-        <div id="map"></div>
-        <script>
 
+        <div id="map"></div>
+        <div id="infoBanner">Feil eller noe som mangler? Send epost til
+            <a href="mailto:narvik.bunkers@gmail.com">narvik.bunkers@gmail.com</a>.
+            <br>Mer info: <a href="/about">www.narvik-bunkers.no/about/</a>
+            <button id="infoBannerClose">X</button>
+        </div>
+
+        <script>
             var center_loc = -1;
             var zoom_value = 18;
             var pos_code = -1;
@@ -68,8 +98,21 @@
                 }
             }
 
+            if ((sessionStorage.getItem('infoBannerClosed') !== 'closed') && 
+                (!(navigator.userAgent.toLowerCase().includes('bot') ||
+                   navigator.userAgent.toLowerCase().includes('crawl') ||
+                   navigator.userAgent.toLowerCase().includes('spider') ||
+                   navigator.userAgent.toLowerCase().includes('search')))) {
+                document.getElementById('infoBanner').style.display = 'block';
+            }
+            document.getElementById('infoBannerClose').onclick = function(){
+                 document.getElementById('infoBanner').style.display = 'none';
+                 sessionStorage.setItem('infoBannerClosed','closed');
+                return false;
+            };
+
             var url2 = 'narvik-bunkers.json';
-            
+
             L.tmhandler = L.Handler.extend({
                 addHooks: function() {
                     L.DomEvent.on(this._map._container, 'touchmove', this._touch, this);
@@ -95,10 +138,15 @@
             const req = new XMLHttpRequest();
             var cpos = 'none';
             var ocpos = 'init';
-            const requestTag = Math.floor(Math.random() * 0x1000000).toString(16);
+            if (sessionStorage.getItem('tag') === null) {
+                sessionStorage.setItem('tag', Math.floor(Math.random() * 0x1000000).toString(16));
+                ocpos = 'init2';
+            };
+            const requestTag = sessionStorage.getItem('tag');
             map.on('mousemove', function (e) {cpos = e.latlng.lat + ' ' + e.latlng.lng;} );
             map.on('zoomend', function(e) {
                 var query = 't='+requestTag;
+                query += '&v=1.1';
                 query += '&l=' + encodeURIComponent(cpos);
                 query += '&z=' + encodeURIComponent(Math.round(map.getZoom()));
                 if (ocpos === 'init') {
@@ -112,44 +160,38 @@
             });
             var scalebar = L.control.scale({metric:true, imperial:false}).addTo(map);
             
-var infoControl =  L.Control.extend({
+            var infoControl =  L.Control.extend({
+              onAdd: function (map) {
+                var c = L.DomUtil.create('i');
+                c.style.fontFamily = 'FontAwesome';
+                c.style.fontStyle = 'normal';
+                c.textContent = "\uf05a"; // fa-info-circle
+                /* real border has an alpha channel */
+                c.style.border = '2px solid #ccc';
+                c.style.borderRadius = '3px';
+                c.style.fontSize = 'large';
+                c.style.backgroundColor = 'white';
+                c.style.backgroundSize = "30px 30px";
+                c.style.width = '30px';
+                c.style.height = '30px';
+                c.style.textAlign = 'center';
+                c.style.lineHeight = '30px';
+                c.zIndex = 800;
+                c.onmouseover = function(){
+                  c.style.backgroundColor = '#f4f4f4'; 
+                };
+                c.onmouseout = function(){
+                  c.style.backgroundColor = 'white'; 
+                };
+                c.onclick = function(){
+                    window.open('about/');
+                };
+                return c;
+              }
+            });
 
-  onAdd: function (map) {
-    var c = L.DomUtil.create('i');
-    c.style.fontFamily = 'FontAwesome';
-    c.style.fontStyle = 'normal';
-    c.textContent = "\uf05a"; // fa-info-circle
-
-    /* real border has an alpha channel */
-    c.style.border = '2px solid #ccc';
-    c.style.borderRadius = '3px';
-    
-    c.style.fontSize = 'large';
-    c.style.backgroundColor = 'white';
-    c.style.backgroundSize = "30px 30px";
-    c.style.width = '30px';
-    c.style.height = '30px';
-    c.style.textAlign = 'center';
-    c.style.lineHeight = '30px';
-    c.zIndex = 800;
-    
-    c.onmouseover = function(){
-      c.style.backgroundColor = '#f4f4f4'; 
-    }
-    c.onmouseout = function(){
-      c.style.backgroundColor = 'white'; 
-    }
-
-    c.onclick = function(){
-        window.open('about/');
-    }
-
-    return c;
-  }
-});
-
-var infoCtrl = new infoControl({position: 'topleft'}).addTo(map);
-            
+            var infoCtrl = new infoControl({position: 'topleft'}).addTo(map);
+                        
             var BasicMarker = L.Icon.extend({
                 options: {
                     iconSize:     [11, 11],
