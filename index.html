@@ -137,16 +137,16 @@
             map.on('locationfound', function(e){locate.options.strings.popup = e.latlng.lat.toFixed(6) + ', ' + e.latlng.lng.toFixed(6);});
             const req = new XMLHttpRequest();
             var cpos = 'none';
-            var ocpos = 'init';
+            var ocpos = 'init-x';
             if (sessionStorage.getItem('tag') === null) {
                 sessionStorage.setItem('tag', Math.floor(Math.random() * 0x1000000).toString(16));
-                ocpos = 'init2';
+                ocpos = 'init';
             };
             const requestTag = sessionStorage.getItem('tag');
             map.on('mousemove', function (e) {cpos = e.latlng.lat + ' ' + e.latlng.lng;} );
             map.on('zoomend', function(e) {
                 var query = 't='+requestTag;
-                query += '&v=1.1';
+                query += '&v=1.2';
                 query += '&l=' + encodeURIComponent(cpos);
                 query += '&z=' + encodeURIComponent(Math.round(map.getZoom()));
                 if (ocpos === 'init') {
