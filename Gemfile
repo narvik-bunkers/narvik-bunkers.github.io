@@ -13,14 +13,15 @@ source "https://rubygems.org"
 gem "jekyll-theme-cayman"
 
 #gem "github-pages", group: :jekyll_plugins
-
+# this is a work-around:
+gem 'eventmachine', '1.2.7', git: 'https://github.com/eventmachine/eventmachine.git', tag: 'v1.2.7'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.11"
+#  gem "jekyll-feed", "~> 0.11"
   gem "github-pages", ">=202"
 end
 
@@ -34,3 +35,5 @@ end
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
+
+gem "webrick", "~> 1.7"

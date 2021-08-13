@@ -145,8 +145,7 @@
             const requestTag = sessionStorage.getItem('tag');
             map.on('mousemove', function (e) {cpos = e.latlng.lat + ' ' + e.latlng.lng;} );
             map.on('zoomend', function(e) {
-                var query = 't='+requestTag;
-                query += '&v=1.2';
+                var query = 't='+requestTag+'&v=1.3&o=m';
                 query += '&l=' + encodeURIComponent(cpos);
                 query += '&z=' + encodeURIComponent(Math.round(map.getZoom()));
                 if (ocpos === 'init') {
