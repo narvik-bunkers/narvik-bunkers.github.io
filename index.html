@@ -137,19 +137,23 @@
             map.on('locationfound', function(e){locate.options.strings.popup = e.latlng.lat.toFixed(6) + ', ' + e.latlng.lng.toFixed(6);});
             const req = new XMLHttpRequest();
             var cpos = 'none';
-            var ocpos = 'init-x';
+            var ocpos = 'init';
+            var repcnt = 0;
             if (sessionStorage.getItem('tag') === null) {
                 sessionStorage.setItem('tag', Math.floor(Math.random() * 0x1000000).toString(16));
-                ocpos = 'init';
             };
             const requestTag = sessionStorage.getItem('tag');
+            
+            req.open("GET", "https://xdat.eu/narvik-bunkers.no/?t="+requestTag+"&v=1.4&o=m&a=i&z="+encodeURIComponent(Math.round(map.getZoom()))+"&r="+encodeURIComponent(document.referrer), true);
+            req.send();
             map.on('mousemove', function (e) {cpos = e.latlng.lat + ' ' + e.latlng.lng;} );
             map.on('zoomend', function(e) {
-                var query = 't='+requestTag+'&v=1.3&o=m';
+                var query = 't='+requestTag+'&v=1.4&o=m&a=z';
                 query += '&l=' + encodeURIComponent(cpos);
                 query += '&z=' + encodeURIComponent(Math.round(map.getZoom()));
-                if (ocpos === 'init') {
+                if (repcnt === 0) {
                     query += "&r="+encodeURIComponent(document.referrer);
+                    repcnt = 1;
                 }
                 if (cpos !== ocpos) {
                     req.open("GET", "https://xdat.eu/narvik-bunkers.no/?"+query, true);
