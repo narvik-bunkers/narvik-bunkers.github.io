@@ -5,7 +5,7 @@ This repository contains the source files (coordinates, photos) of the Narvik bu
 
 An overview of the structures is available at [https://www.narvik-bunkers.no/overview/](https://www.narvik-bunkers.no/overview/).
 
-Author: Chris Petrich, 2020-2021
+Author: Chris Petrich, 2020-2022
 License: CC BY 4.0.
 
 See [https://www.narvik-bunkers.no/about/](https://www.narvik-bunkers.no/about/) for details.
