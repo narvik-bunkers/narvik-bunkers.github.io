@@ -18,6 +18,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+
+        <!-- use UTM33-projected tiles -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.7.5/proj4.min.js" integrity="sha512-Nwp3XMQKRvqr376bCa50Hs4X4z5zbsefo63QLa62poTx5o/GhYgjnToCoBZk7bxjeP2y84oEgKNUrpK2+2Czyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4leaflet/1.0.2/proj4leaflet.min.js" integrity="sha512-GsAYl1wxzWW6azVpXkhyYfjMb2LbaOnlrqWMBdAk9xDcilinFvGMN+48Ajp/10u/9lcnh8YyS2CYNgung7ewHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <style>
             html, body {
                 padding: 0;
@@ -41,7 +45,7 @@
                 background: rgba(255,255,255,0.7);
                 color: black;
                 padding: 1em 2em 1em 2em;
-                font: italic small-caps bold 100% cursive;
+                font: italic small-caps bold 100% sans-serif;
                 z-index: 1001;
                 display: none;
             }
@@ -123,17 +127,44 @@
                 }
             });
             L.Map.addInitHook('addHandler', 'ttmove', L.tmhandler);
-            
-            var map = L.map('map',{zoomSnap:0}).fitBounds([[68.428, 17.37],[68.45, 17.54]]); // or use setView() to set the zoom level explicitly
-            //var map = L.map('map',{zoomSnap:0}).fitBounds([[68.428, 17.37],[68.45, 17.445]]); // or use setView() to set the zoom level explicitly
+            var map = null;
+            const utm33Projection = true;
+            if (!utm33Projection) {
+              map = L.map('map',{zoomSnap:0}).fitBounds([[68.428, 17.37],[68.45, 17.54]]); // or use setView() to set the zoom level explicitly
+              //var map = L.map('map',{zoomSnap:0}).fitBounds([[68.428, 17.37],[68.45, 17.445]]); // or use setView() to set the zoom level explicitly
+              
+              L.tileLayer('https://{s}.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo4&zoom={z}&x={x}&y={y}', {
+                  attribution: '<a href="https://www.kartverket.no/">Kartverket</a> | <a href="/about/">Narvik Bunkers</a>',
+                  subdomains: ['opencache3','opencache2','opencache']
+              }).addTo(map);
+            } else {
+              // instantiation from https://github.com/cpetrich/leaflet-kartverket-UTM33, MIT license
+              const crsStr = 'EPSG:25833';
+              const crsProj4 = '+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs';
+              const crsTileOrg = [-2500000, 9045984];
+              const crsBaseResolution = 21664;
+              const crsMaxZoom = 18;
+              const crs = new L.Proj.CRS(crsStr, crsProj4,
+                                { origin: crsTileOrg, 
+                                  resolutions: Array.from(Array(crsMaxZoom+1),(e,zoomLevel) => crsBaseResolution/Math.pow(2,zoomLevel))
+                                });
+              map = L.map('map', {
+                  zoomSnap: 0,
+                  crs: crs,
+              }).fitBounds([[68.428, 17.37],[68.45, 17.54]]);
+              const owsId = 'norgeskart_bakgrunn';
+              const url = 'https://opencache{s}.statkart.no/gatekeeper/gk/gk.open_wmts?&layer='+owsId+'&style=default&tilematrixset='+crsStr+'&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix='+crsStr+':{z}&TileCol={x}&TileRow={y}';
+              const kartverketTiles = L.tileLayer(url, {
+                  subdomains: ['', '2', '3'],
+                  maxZoom: crsMaxZoom,
+                  attribution: '<a href="https://www.kartverket.no/">Kartverket</a> | <a href="/about/">Narvik Bunkers</a>',
+              });
+              map.addLayer(kartverketTiles);
+            }
             map.ttmove.enable();
             if (center_loc != -1) {
                 map.setView(center_loc, zoom_value);
             }
-            L.tileLayer('https://{s}.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo4&zoom={z}&x={x}&y={y}', {
-                attribution: '<a href="https://www.kartverket.no/">Kartverket</a> | <a href="about/">Narvik Bunkers</a>',
-                subdomains: ['opencache3','opencache2','opencache']
-            }).addTo(map);
             var locate = L.control.locate({setView:true, maxZoom:16, locateOptions:{enableHighAccuracy:true}}).addTo(map);
             map.on('locationfound', function(e){locate.options.strings.popup = e.latlng.lat.toFixed(6) + ', ' + e.latlng.lng.toFixed(6);});
             const req = new XMLHttpRequest();
