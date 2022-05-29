@@ -37,6 +37,17 @@
                 position: relative;
             }
             .leaflet-popup-content { min-width: 15em; max-width:15em;}  /* this typically scales with text width, so fix it here. */
+            .tips, a.tips {
+                box-shadow: 2px 2px 1px black;
+                margin-left: 0.1em;
+                margin-right: 0.1em;
+                border-radius: 0.5em;
+                border: 1px solid black;
+                font-size: 130%;
+                padding: 0.5em;
+                background: rgba(222,240,255,1);
+                color: black;
+            }
             #infoBanner {
                 position: fixed;
                 bottom: 0;
@@ -305,6 +316,48 @@
                 }).bindTooltip(e.latlng.lat.toFixed(5)+', '+e.latlng.lng.toFixed(5), {permanent: true, direction: 'right'}).addTo(map);
                 marker.on('contextmenu',function(e){map.removeLayer(this);});
                 marker.on('drag',function(e){this.setTooltipContent(e.latlng.lat.toFixed(5)+', '+e.latlng.lng.toFixed(5));});
+            });
+
+            function tips_link(co) {
+                return '<a href="https://docs.google.com/forms/d/e/1FAIpQLSdkOmRXd3pS02xI5ROxpRH2nw9mbEAzTyI-flyP4Pq5he0MIw/viewform?usp=pp_url&entry.664230702=' + co.lat.toFixed(5) + '+N,+' + co.lng.toFixed(5) + '+%C3%98" class="tips" onclick="event.stopPropagation()" target="_blank" rel="noopener noreferrer">send tips...</a> <span onclick="close_tip(event)" class="tips">X</span>';
+            }
+            let single_click = null;
+            let current_tip = null;
+            function close_tip(e) {
+                map.removeLayer(current_tip);
+                current_tip = null;
+                e.stopPropagation();
+            }
+            function click_handler(e) {
+                single_click = null;
+                if (current_tip !== null) map.removeLayer(current_tip);
+                current_tip = null;
+                if (map.getZoom() < 13) return; // map too coarse
+                var marker = new L.marker(e.latlng,{
+                    draggable: true,
+                    autoPan: true
+                }).bindTooltip(tips_link(e.latlng), {interactive: true, permanent: true, direction: 'right'}).addTo(map);
+                marker.on('click',function(e){map.removeLayer(this);});
+                marker.on('drag',function(e){this.setTooltipContent(tips_link(e.latlng));});
+                current_tip = marker;
+            }
+            map.on('click', function(e) {
+                if (popup_just_closed != 0) return;  // if this click had been propagated from a popup close click (i.e. click anywhere on the map) then ignore it
+                if (single_click === null)
+                    single_click = setTimeout( click_handler, 300, e );
+                else {
+                    clearTimeout(single_click);
+                    single_click = null;
+                }
+            });
+            map.on('doubleclick', function(e) {
+                clearTimeout(single_click);
+                single_click = null;
+            });
+            let popup_just_closed = 0;
+            map.on('popupclose', function(e) {
+                popup_just_closed = 1; // while this is 1 ignore all (propagated) click events on the map that would otherwise open a suggestion link
+                setTimeout(function(){popup_just_closed = 0;}, 300);
             });
         </script>
     </body>
