@@ -50,7 +50,7 @@ There are a couple of war-related installations in Narvik that are not of German
 Further candidates for LKAB constructions are the shelter at [Nedre lokstall](/?pos=MLH), the tunnel at [Villa Meyer](/?pos=NWJ-DTD), and possibly the [foot tunnel next to Frydenlundstunnelen](/?ll=68.43421,17.40476).
 The [tunnel near Fjellheim](/?pos=WLT) stems presumably from mining operations.
 
-<script>const req = new XMLHttpRequest(); if (sessionStorage.getItem('tag') === null) sessionStorage.setItem('tag', Math.floor(Math.random() * 0x1000000).toString(16)); req.open("GET", 'https://xdat.eu/narvik-bunkers.no/?t='+sessionStorage.getItem('tag')+'&v=1.5&o=o&r='+encodeURIComponent(document.referrer), true); req.send(); document.addEventListener("visibilitychange", () => {req.open("GET", "https://xdat.eu/narvik-bunkers.no/?t="+requestTag+"&v=1.5&o=o&a=v&d="+document.visibilityState, true); req.send();});</script>
+<script>const req = new XMLHttpRequest(); if (sessionStorage.getItem('tag') === null) sessionStorage.setItem('tag', Math.floor(Math.random() * 0x1000000).toString(16)); req.open("GET", 'https://xdat.eu/narvik-bunkers.no/?t='+sessionStorage.getItem('tag')+'&v=1.5&o=o&r='+encodeURIComponent(document.referrer), true); req.send(); document.addEventListener("visibilitychange", () => {req.open("GET", "https://xdat.eu/narvik-bunkers.no/?t="+sessionStorage.getItem('tag')+"&v=1.5&o=o&a=v&d="+document.visibilityState, true); req.send();});</script>
 
 ## Bunker trips for the whole family around Narvik
 
