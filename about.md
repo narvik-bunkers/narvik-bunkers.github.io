@@ -37,7 +37,7 @@ Data and photos on the site are provided under the [CC BY 4.0 license](https://c
 > The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or 
 > moral rights may limit how you use the material.
 
-<script>const req = new XMLHttpRequest(); if (sessionStorage.getItem('tag') === null) sessionStorage.setItem('tag', Math.floor(Math.random() * 0x1000000).toString(16)); req.open("GET", 'https://xdat.eu/narvik-bunkers.no/?t='+sessionStorage.getItem('tag')+'&v=1.3&o=a&r='+encodeURIComponent(document.referrer), true); req.send();</script>
+<script>const req = new XMLHttpRequest(); if (sessionStorage.getItem('tag') === null) sessionStorage.setItem('tag', Math.floor(Math.random() * 0x1000000).toString(16)); req.open("GET", 'https://xdat.eu/narvik-bunkers.no/?t='+sessionStorage.getItem('tag')+'&v=1.5&o=a&r='+encodeURIComponent(document.referrer), true); req.send(); document.addEventListener("visibilitychange", () => {req.open("GET", "https://xdat.eu/narvik-bunkers.no/?t="+requestTag+"&v=1.5&o=a&a=v&d="+document.visibilityState, true); req.send();});</script>
 
 # Further Reading
 - Fjørtoft, J.E. (1983), Tyske kystfort i Norge. Available online at [www.nb.no](https://www.nb.no/items/7d97faa8fb12c6686d9aad0045a781a9).

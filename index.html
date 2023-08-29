@@ -187,13 +187,13 @@
             };
             const requestTag = sessionStorage.getItem('tag');
             
-            req.open("GET", "https://xdat.eu/narvik-bunkers.no/?t="+requestTag+"&v=1.4&o=m&a=i&z="+encodeURIComponent(Math.round(map.getZoom()))+"&r="+encodeURIComponent(document.referrer), true);
+            req.open("GET", "https://xdat.eu/narvik-bunkers.no/?t="+requestTag+"&v=1.5&o=m&a=i&z="+encodeURIComponent(map.getZoom().toFixed(1))+"&r="+encodeURIComponent(document.referrer), true);
             req.send();
             map.on('mousemove', function (e) {cpos = e.latlng.lat + ' ' + e.latlng.lng;} );
             map.on('zoomend', function(e) {
-                var query = 't='+requestTag+'&v=1.4&o=m&a=z';
+                var query = 't='+requestTag+'&v=1.5&o=m&a=z';
                 query += '&l=' + encodeURIComponent(cpos);
-                query += '&z=' + encodeURIComponent(Math.round(map.getZoom()));
+                query += '&z=' + encodeURIComponent(map.getZoom().toFixed(1));
                 if (repcnt === 0) {
                     query += "&r="+encodeURIComponent(document.referrer);
                     repcnt = 1;
@@ -205,7 +205,11 @@
                 }
             });
             var scalebar = L.control.scale({metric:true, imperial:false}).addTo(map);
-            
+            document.addEventListener("visibilitychange", () => {
+                req.open("GET", "https://xdat.eu/narvik-bunkers.no/?t="+requestTag+"&v=1.5&o=m&a=v&d="+document.visibilityState, true);
+                req.send();
+            });
+
             var infoControl =  L.Control.extend({
               onAdd: function (map) {
                 var c = L.DomUtil.create('i');
@@ -318,6 +322,7 @@
                 marker.on('drag',function(e){this.setTooltipContent(e.latlng.lat.toFixed(5)+', '+e.latlng.lng.toFixed(5));});
             });
 
+            /*
             function tips_link(co) {
                 return '<a href="https://docs.google.com/forms/d/e/1FAIpQLSdkOmRXd3pS02xI5ROxpRH2nw9mbEAzTyI-flyP4Pq5he0MIw/viewform?usp=pp_url&entry.664230702=' + co.lat.toFixed(5) + '+N,+' + co.lng.toFixed(5) + '+%C3%98" class="tips" onclick="event.stopPropagation()" target="_blank" rel="noopener noreferrer">send tips...</a> <span onclick="close_tip(event)" class="tips">X</span>';
             }
@@ -359,6 +364,7 @@
                 popup_just_closed = 1; // while this is 1 ignore all (propagated) click events on the map that would otherwise open a suggestion link
                 setTimeout(function(){popup_just_closed = 0;}, 300);
             });
+            */
         </script>
     </body>
 </html>
