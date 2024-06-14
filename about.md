@@ -10,7 +10,7 @@ permalink: /about/
 # About
 The WW2 bunker map at [https://www.narvik-bunkers.no/](/) shows the location of relicts of defense-related structures built around 1939-1945 in the region around Narvik, Norway: bunkers, tunnels, battle stations, barraks. Almost all of them were built by German forces and were part of the Atlantic Wall, the defense of the iron ore port city of Narvik, *Festung Narvik*, or defense of infrastructure at Bogen or Skjomen. For the purpose of this page the region around Narvik is anything east of Lødingen, i.e. essentially the area of the Artilleriegruppe Narvik *HKAA III/973*, comprising [HKB 31/973 Evenestangen](/?ll=68.45507,16.71409&z=16), HKB 32/973 Tjelneset, [HKB 33/973 Öyjordneset](/?ll=68.46614,17.47470&z=16), [HKB 34/973 Rombakken](/?ll=68.44268,17.39923&z=17), [HKB 35/973 Saltvikneset](/?ll=68.38319,17.04446&z=17), [HKB 36/973 (MKB 3/511) Framnes](/?ll=68.43406,17.39395&z=17), HKB 37/973 Ramnes, and MKB 2/516 Ramstad, and also [MKB 6/516 Korshamn (Korshavn)/Porsøy (Porsöy)](/?ll=68.41523,16.56511&z=14) which belonged to Artilleriegruppe Ofotfjord. The focus is on installations that were used beyond June 1940. While the map is quite incomplete, it gives already a general idea of the type of installations and their locations.
 
-Author: Chris Petrich, 2 Nov 2023
+Author: Chris Petrich, 15 Jun 2024
 
 > I live in Narvik and put this web site together as a first attempt of making sense of the ruins around me. My vision would be something like the [trail guide of Evenestangen](https://www.evenes.kommune.no/selvbetjening/dokumentarkiv/kultur-og-fritid/friluftsliv/1030-evenestangen-tursti-hiking-trail/file.html).
 
@@ -44,7 +44,9 @@ Data and photos on the site are provided under the [CC BY 4.0 license](https://c
 - Ytreberg, N.A. (1954), Narviks historie, Bind II: fra første verdenskrieg til våre dager. Available online at [www.nb.no](https://www.nb.no/items/87a234ef7ee0746cd39694350f1b10f0).
 - Sundlo, K. (1955), Narvik 1940 "byen med kanonen". Available online at [www.nb.no](https://www.nb.no/items/7614fd2047cd0afd67594e85ffad67a2).
 - 3\. Gebirgsdivision (1940), Kriegstagebuch. Narvik 06.04.-10.06.1940. Available online at [www.digitalarkivet.no](https://www.digitalarkivet.no/db20140310023126).
-- Kristensen, V.H. (1992), Kanonene på Framnes, In *Årbok for Narvik 2012*, Ofoten slekts- og historielag, pp. 28-31. Introduction available online at [narvikhistorie.wordpress.com](https://narvikhistorie.wordpress.com/2012/12/17/kanonene-pa-framnes/), check availability of article at [Narvik Museum](https://www.museumnord.no/en/narvik/). Related, "Historisk vandring til Narvik fort", [Fremover of 19 Aug 2015](https://www.fremover.no/lokale-nyheter/narvik/historisk-vandring-til-narvik-fort/s/5-17-74261).
+- Nicolaysen, O. (2005), Sør-Skjomen under andre verdenskrig, In *Årbok for Narvik 2005*, Ofoten slekts- og historielag, pp. 90-100.
+- Kristensen, V.H. (2012), Kanonene på Framnes, In *Årbok for Narvik 2012*, Ofoten slekts- og historielag, pp. 28-31. Introduction available online at [narvikhistorie.wordpress.com](https://narvikhistorie.wordpress.com/2012/12/17/kanonene-pa-framnes/), check availability of article at [Narvik Museum](https://www.museumnord.no/en/narvik/). Related, "Historisk vandring til Narvik fort", [Fremover of 19 Aug 2015](https://www.fremover.no/lokale-nyheter/narvik/historisk-vandring-til-narvik-fort/s/5-17-74261).
+- Rognmo, J. (2017), Havnevesenets bomberom, In *Årbok for Narvik 2017*, Ofoten slekts- og historielag, pp. 76-77.
 - Fremover (2020), "Disse dokumentene viser noe annet", 1 Nov 2020 [Fremover online](https://www.fremover.no/mange-hevdet-bildet-var-manipulert-ingen-husket-bunkeren-men-disse-dokumentene-viser-noe-annet/s/5-17-775035)
 
 # Acknowledgement of Free Stuff

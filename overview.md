@@ -47,6 +47,7 @@ Virtually all installations that I found are close to roads or trails (or power 
 ### Norwegian installations
 
 There are a couple of war-related installations in Narvik that are not of German origin. Most prominent is the [LKAB Bolagstunnellen](/?pos=JTB-BBY) (cf. [story in Fremover](https://www.fremover.no/lkab/narvik/demag/sjekk-den-gamle-bolagstunnelen/s/5-17-332419)), which was built before the German occupation, used as a civilian bomb shelter, and only closed in 2006. Also, the tunnel [behind Lasarettet](/?pos=WRR) was built pre-war as a civilian bomb shelter, and there was supposed to be one in Kleiva, maybe this [bunker "without entrance"](/?pos=NMS), not sure about that one, though.
+The [multistorey bunker with windows](/?pos=GCJ) behind Havnens hus belongs also in this category.
 Further candidates for LKAB constructions are the shelter at [Nedre lokstall](/?pos=MLH), the tunnel at [Villa Meyer](/?pos=NWJ-DTD), and possibly the [foot tunnel next to Frydenlundstunnelen](/?ll=68.43421,17.40476).
 The [tunnel near Fjellheim](/?pos=WLT) stems presumably from mining operations.
 
