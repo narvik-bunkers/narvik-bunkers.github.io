@@ -142,15 +142,13 @@
             const utm33Projection = true;
             if (!utm33Projection) {
               map = L.map('map',{zoomSnap:0}).fitBounds([[68.428, 17.37],[68.45, 17.54]]); // or use setView() to set the zoom level explicitly
-              //var map = L.map('map',{zoomSnap:0}).fitBounds([[68.428, 17.37],[68.45, 17.445]]); // or use setView() to set the zoom level explicitly
-              
-              L.tileLayer('https://{s}.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo4&zoom={z}&x={x}&y={y}', {
+              L.tileLayer('https://cache{s}.kartverket.no/v1/wmts/1.0.0/topo/default/webmercator/{z}/{y}/{x}.png', {
                   attribution: '<a href="https://www.kartverket.no/">Kartverket</a> | <a href="/about/">Narvik Bunkers</a>',
-                  subdomains: ['opencache3','opencache2','opencache']
+                  subdomains: ['','2','3','4']
               }).addTo(map);
             } else {
               // instantiation from https://github.com/cpetrich/leaflet-kartverket-UTM33, MIT license
-              const crsStr = 'EPSG:25833';
+              const crsStr = 'EPSG:25833'; // a.k.a. utm33n
               const crsProj4 = '+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs';
               const crsTileOrg = [-2500000, 9045984];
               const crsBaseResolution = 21664;
@@ -163,10 +161,9 @@
                   zoomSnap: 0,
                   crs: crs,
               }).fitBounds([[68.428, 17.37],[68.45, 17.54]]);
-              const owsId = 'norgeskart_bakgrunn';
-              const url = 'https://opencache{s}.statkart.no/gatekeeper/gk/gk.open_wmts?&layer='+owsId+'&style=default&tilematrixset='+crsStr+'&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix='+crsStr+':{z}&TileCol={x}&TileRow={y}';
+              const url = 'https://cache{s}.kartverket.no/v1/wmts/1.0.0/topo/default/utm33n/{z}/{y}/{x}.png';
               const kartverketTiles = L.tileLayer(url, {
-                  subdomains: ['', '2', '3'],
+                  subdomains: ['', '2', '3', '4'],
                   maxZoom: crsMaxZoom,
                   attribution: '<a href="https://www.kartverket.no/">Kartverket</a> | <a href="/about/">Narvik Bunkers</a>',
               });
